@@ -1,6 +1,7 @@
 package com.plite.testmod.block;
 
 import com.plite.testmod.TestMod;
+import com.plite.testmod.block.custom.BrainBlockII;
 import com.plite.testmod.item.ModCreativeModeTab;
 import com.plite.testmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -21,6 +22,10 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, TestMod.MOD_ID);
 
     public static final RegistryObject<Block> BRAIN_BLOCK = registerBlock("brain_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.TEST_TAB);
+
+    public static final RegistryObject<Block> BRAIN_BLOCK_II = registerBlock("brain_block_2",
+            () -> new BrainBlockII(BlockBehaviour.Properties.of(Material.STONE).lightLevel(state -> state.getValue(BrainBlockII.ACTIVE) ? 15 : 0)
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.TEST_TAB);
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

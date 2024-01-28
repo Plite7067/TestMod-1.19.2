@@ -1,5 +1,6 @@
 {
   "variants": {
-    "": { "model":  "testmod:block/brain_block" }
+    "active=true": { "model":  "testmod:block/brain_block_active" },
+    "active=false": { "model":  "testmod:block/brain_block_dormant" }
   }
 }
