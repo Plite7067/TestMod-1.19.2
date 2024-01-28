@@ -1,6 +1,7 @@
 package com.plite.testmod;
 
 import com.mojang.logging.LogUtils;
+import com.plite.testmod.block.ModBlocks;
 import com.plite.testmod.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -22,6 +23,7 @@ public class TestMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

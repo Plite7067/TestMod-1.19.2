@@ -1,5 +1,6 @@
 {
   "item.testmod.scrap": "Scrap",
   "item.testmod.scrap_ingot": "Scrap Ingot",
-  "itemGroup.test_tab": "Test Tab"
+  "itemGroup.test_tab": "Test Tab",
+  "block.testmod.brain_block": "Block of Brain"
 }
